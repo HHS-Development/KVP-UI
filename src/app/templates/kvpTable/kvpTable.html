@@ -1,16 +1,16 @@
 <table>
     <thead>
-    <tr>Col 1</tr>
-    <tr>Col 2</tr>
+    <tr>
+        <th>Name</th>
+        <th>Beschreibung</th>
+        <th>Votes</th>
+    </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>Test</td>
-        <td>Bla</td>
-    </tr>
-    <tr>
-        <td>Test 2</td>
-        <td>Bla 2</td>
+    <tr *ng-for="#ticket of tickets">
+        <td>{{ticket.title}}</td>
+        <td>{{ticket.description}}</td>
+        <td>{{ticket.votes}}</td>
     </tr>
     </tbody>
 </table>
