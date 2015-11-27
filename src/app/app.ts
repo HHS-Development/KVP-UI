@@ -1,7 +1,8 @@
 import {bootstrap, Component} from 'angular2/angular2';
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    templateUrl: 'app/templates/test/test.html',
+    styleUrls: ['app/templates/test/test.css']
 })
 class AppComponent { }
 bootstrap(AppComponent);
