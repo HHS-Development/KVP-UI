@@ -2,25 +2,30 @@
 <head>
     <title>KVP - Ticketsystem</title>
     <!-- 1. Load libraries -->
+    <base href="/">
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/js/transition.js"></script>
+    <script src="node_modules/bootstrap/js/collapse.js"></script>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- 2. Configure SystemJS -->
     <script>
-        System.config({
-            packages: {
-                app: {
-                    format: 'register',
-                    defaultExtension: 'js'
-                }
+      System.config({
+        packages: {
+            app: {
+                format: 'register',
+                defaultExtension: 'js'
             }
-        });
-        System.import('app/boot')
-                .then(null, console.error.bind(console));
+        }
+    });
+    System.import('app/boot')
+            .then(null, console.error.bind(console));
     </script>
 </head>
 <!-- 3. Display the application -->
