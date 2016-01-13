@@ -1,8 +1,6 @@
 import {bootstrap, Component} from 'angular2/angular2';
 import {KVPTable} from './modules/kvpTable';
-
 import {Ticket} from './types/Ticket';
-import {Array} from "../../node_modules/typescript/lib/lib.es6";
 
 @Component({
     selector: 'kvp-app',
@@ -16,7 +14,7 @@ class KVPApp {
 
     constructor () {
 
-        ticket = new Ticket(0, "test 0", "bla", 1);
+        let ticket = new Ticket(0, "test 0", "bla", 1);
         console.log(ticket.title);
 
         //mock
