@@ -1,14 +1,14 @@
-import {bootstrap, Component} from 'angular2/angular2';
-import {KVPTable} from './modules/kvpTable';
-import {Ticket} from './types/Ticket';
+import {Component} from "angular2/angular2";
+import {KVPTable} from "./templates/kvpTable/kvpTable.component";
+import {Ticket} from "./types/Ticket";
 
 @Component({
-    selector: 'kvp-app',
-    templateUrl: 'app/templates/kvpApp/kvpApp.html',
-    styleUrls: ['app/templates/kvpApp/kvpApp.css'],
+    selector: "kvp-app",
+    templateUrl: "app/templates/kvpApp/kvpApp.html",
+    styleUrls: ["app/templates/kvpApp/kvpApp.css"],
     directives: [KVPTable]
 })
-class KVPApp {
+export class AppComponent {
 
     tickets: Array<Ticket> = [];
 
@@ -29,4 +29,3 @@ class KVPApp {
     }
 
 }
-bootstrap(KVPApp);
