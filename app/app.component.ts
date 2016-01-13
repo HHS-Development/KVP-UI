@@ -1,6 +1,8 @@
 import {Component} from 'angular2/core';
+import {NavigationComponent} from './templates/navigation/navigation.component';
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    selector: 'app-component',
+    templateUrl: 'app/templates/app/app.html',
+    directives: [NavigationComponent]
 })
 export class AppComponent { }
