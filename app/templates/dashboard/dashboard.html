@@ -1,1 +1,12 @@
-Hello this is the dashboard. 
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <h3>Ticketübersicht</h3>
+      <div class="panel panel-default" *ngFor="#ticket of tickets">
+        <div class="panel-body">
+          {{ticket.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
