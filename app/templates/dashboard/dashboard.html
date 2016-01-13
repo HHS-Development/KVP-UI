@@ -4,7 +4,15 @@
       <h3>Ticketübersicht</h3>
       <div class="panel panel-default" *ngFor="#ticket of tickets">
         <div class="panel-body">
-          {{ticket.name}}
+          <div class="col-lg-4">
+            {{ticket.name}}
+          </div>
+          <div class="col-lg-4">
+            {{ticket.status}}
+          </div>
+          <div class="col-lg-4">
+            <button class="btn btn-primary">Ticket öffnen</button>
+          </div>
         </div>
       </div>
     </div>
