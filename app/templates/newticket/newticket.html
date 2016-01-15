@@ -1,8 +1,28 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-offset-4 col-lg-6">
+    <div class="col-lg-offset-3 col-lg-6">
       <h3>Neues Ticket erstellen</h3>
       <form>
+        <div class="form-group">
+          <label for="username">Benutzername</label>
+          <input type="text" class="form-control" id="username" value="{{getUserName()}}" readonly="">
+        </div>
+        <div class="form-group">
+          <label for="course">Klasse</label>
+          <input type="text" class="form-control" id="course" value="{{getUserCourse()}}" readonly="">
+        </div>
+        <div class="form-group">
+          <label for="subject">Anliegen</label>
+          <textarea type="text" class="form-control" id="subject" rows="6"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="proposal">Verbesserungsvorschlag</label>
+          <textarea type="text" class="form-control" id="proposal" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="inProcessFor">Wird bearbeitet seit</label>
+          <input type="text" class="form-control" id="inProcessFor" value="{{getCurrentDate()}}" readonly="">
+        </div>
       </form>
     </div>
   </div>
