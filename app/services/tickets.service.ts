@@ -14,7 +14,7 @@ export class TicketsService {
     constructor(private loginService:LoginService,
                 private http:Http) {
 
-        this._getTicketsURL = ConfigurationService.getRestPrefix() + '/tickets.json'
+        this._getTicketsURL = ConfigurationService.getRestPrefix() + '/tickets'
 
     }
 
@@ -27,6 +27,24 @@ export class TicketsService {
     createTicket():void {
         this.loginService.checkAuthenticated();
         throw new UnimplementedError();
+    }
+
+    getTicketById(id:number):Observable {
+        this.loginService.checkAuthenticated();
+        return this.http.get(this._getTicketsURL + '/' + id)
+            .map((res:Response) => res.json());
+    }
+
+    updateTicketById(id:number) {
+        this.loginService.checkAuthenticated();
+        return this.http.put(this._getTicketsURL + '/' + id, '')
+            .map((res:Response) => res.json());
+    }
+
+    deleteTicketById(id:number):Observable<number> {
+        this.loginService.checkAuthenticated();
+        return this.http.delete(this._getTicketsURL + '/' + id)
+            .map((res:Response) => res.status);
     }
 
 }
