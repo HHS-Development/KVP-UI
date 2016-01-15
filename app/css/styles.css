@@ -2,3 +2,29 @@
   width: 50px;
   margin-top: -14px;
 }
+
+.footer{
+    margin-top:10%;
+    height:100px;
+    background-color:#8ccaee;
+    color:white;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footerContentList >li{
+    display:block;
+    float:left;
+    padding:10px;
+}
+
+.footerContentList >li>a{
+    text-decoration: none;
+    color:#444;
+}
+
+.footerContentList >li>a:hover{
+    color:white;
+}
