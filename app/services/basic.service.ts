@@ -11,27 +11,27 @@ export class BasicService {
     }
 
     protected get(url:string,
-                  options:RequestOptionsArgs = new RequestOptionsArgs()):Observable<Response> {
+                  options:RequestOptionsArgs = {}):Observable<Response> {
         this.configureRequest(options);
         return this.http.get(url, options);
     }
 
     protected post(url:string,
                    body:string,
-                   options:RequestOptionsArgs = new RequestOptionsArgs()):Observable<Response> {
+                   options:RequestOptionsArgs = {}):Observable<Response> {
         this.configureRequest(options);
         return this.http.post(url, body, options);
     }
 
     protected put(url:string,
                   body:string,
-                  options:RequestOptionsArgs = new RequestOptionsArgs()):Observable<Response> {
+                  options:RequestOptionsArgs = {}):Observable<Response> {
         this.configureRequest(options);
         return this.http.put(url, body, options);
     }
 
     protected delete(url:string,
-                     options:RequestOptionsArgs = new RequestOptionsArgs):Observable<Response> {
+                     options:RequestOptionsArgs = {}):Observable<Response> {
         this.configureRequest(options);
         return this.http.delete(url, options);
     }
