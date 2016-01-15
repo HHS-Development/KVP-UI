@@ -8,9 +8,10 @@ import {LoginComponent} from '../login/login.component';
     directives: [ROUTER_DIRECTIVES, NgIf, LoginComponent]
 })
 export class NavigationComponent {
+  public loggedIn: boolean = false;
   constructor(private _location: Location){}
   isLoggedIn(): boolean {
-    return false;
+    return true;
   }
 
   getLinkStyle(path): boolean {

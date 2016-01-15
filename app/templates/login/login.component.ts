@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {NavigationComponent} from '../navigation/navigation.component';
 
 @Component({
     selector: 'login-component',
