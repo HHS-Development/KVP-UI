@@ -23,16 +23,7 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-      <!-- Not Logged In -->
-      <form class="navbar-form navbar-right" *ngIf="!isLoggedIn()">
-        <div class="form-group">
-          <input type="text" class="form-control" id="username" placeholder="Nutzername">
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control" id="password" placeholder="Passwort">
-        </div>
-        <button class="btn btn-success">Login</button>
-      </form>
+      <login-component *ngIf="!isLoggedIn()"></login-component>
       <!-- Logged In -->
       <form class="navbar-form navbar-right" *ngIf="isLoggedIn()">
         <img src="img/hallo.jpg" class="img img-circle">
