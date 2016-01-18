@@ -15,4 +15,8 @@ export class NewTicketComponent {
   getCurrentDate(): string {
     return "15.01.2016";
   }
+
+  createTicket(): void {
+    // to do
+  }
 }
