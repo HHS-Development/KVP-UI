@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default custom-navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -23,16 +23,24 @@
         </ul>
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Suchen">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Suchen</button>
         </form>
       </div>
       <login-component *ngIf="!isLoggedIn()"></login-component>
       <!-- Logged In -->
       <form class="navbar-form navbar-right" *ngIf="isLoggedIn()">
-        <img src="img/hallo.jpg" class="img img-circle">
-        Username
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="glyphicon glyphicon-user"></span>
+            {{user.name}}
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a (click)="logout()"><span class="glyphicon glyphicon-off" style="padding-right:5px"></span>Logout</a></li>
+          </ul>
+        </div>
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
