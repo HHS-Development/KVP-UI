@@ -12,6 +12,10 @@
           <input type="text" class="form-control" id="course" value="{{getUserCourse()}}" readonly="" />
         </div>
         <div class="form-group">
+          <label for="inProcessFor">Erstellt am</label>
+          <input type="text" class="form-control" id="inProcessFor" value="{{getCurrentDate()}}" readonly="" />
+        </div>
+        <div class="form-group">
           <label for="subject">Anliegen</label>
           <textarea type="text" class="form-control" id="subject" rows="6"></textarea>
         </div>
@@ -19,10 +23,7 @@
           <label for="proposal">Verbesserungsvorschlag</label>
           <textarea type="text" class="form-control" id="proposal" rows="10"></textarea>
         </div>
-        <div class="form-group">
-          <label for="inProcessFor">Wird bearbeitet seit</label>
-          <input type="text" class="form-control" id="inProcessFor" value="{{getCurrentDate()}}" readonly="" />
-        </div>
+        <button class="btn btn-primary pull-right" (click)="createTicket()">Verbesserungsvorschlag einreichen</button>
       </form>
     </div>
   </div>

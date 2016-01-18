@@ -9,9 +9,14 @@ import {LoginComponent} from '../login/login.component';
 })
 export class NavigationComponent {
   public loggedIn: boolean = false;
+  private user = {"name": "Charlie Sheen"};
   constructor(private _location: Location){}
   isLoggedIn(): boolean {
     return true;
+  }
+
+  logout(): void {
+    // to do
   }
 
   getLinkStyle(path): boolean {
