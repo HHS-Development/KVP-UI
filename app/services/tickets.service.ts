@@ -12,12 +12,12 @@ export class TicketsService {
 
     private _getTicketsURL:string;
 
-    constructor(private http:BasicAuthHttp) {
+    constructor(private _http:Http, private _authHttp:BasicAuthHttp) {
         this._getTicketsURL = ConfigurationService.getRestPrefix() + '/tickets'
     }
 
     getTickets():Observable<any> {
-        return this.http.get(this._getTicketsURL)
+        return this._http.get(this._getTicketsURL)
             .map((res:Response) => res.json());
     }
 
@@ -26,17 +26,17 @@ export class TicketsService {
     }
 
     getTicketById(id:number):Observable<any> {
-        return this.http.get(this._getTicketsURL + '/' + id)
+        return this._http.get(this._getTicketsURL + '/' + id)
             .map((res:Response) => res.json());
     }
 
     updateTicketById(id:number) {
-        return this.http.put(this._getTicketsURL + '/' + id, '')
+        return this._authHttp.put(this._getTicketsURL + '/' + id, '')
             .map((res:Response) => res.json());
     }
 
     deleteTicketById(id:number):Observable<number> {
-        return this.http.delete(this._getTicketsURL + '/' + id)
+        return this._authHttp.delete(this._getTicketsURL + '/' + id)
             .map((res:Response) => res.status);
     }
 
