@@ -1,15 +1,16 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\dev\\nodejs\\node.exe',
 1 verbose cli   'C:\\dev\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'start' ]
+1 verbose cli   'run',
+1 verbose cli   'tsc:w' ]
 2 info using npm@2.14.4
 3 info using node@v4.1.1
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart kvp@1.0.0
-6 info start kvp@1.0.0
+4 verbose run-script [ 'pretsc:w', 'tsc:w', 'posttsc:w' ]
+5 info pretsc:w kvp@1.0.0
+6 info tsc:w kvp@1.0.0
 7 verbose unsafe-perm in lifecycle true
-8 info kvp@1.0.0 Failed to exec start script
-9 verbose stack Error: kvp@1.0.0 start: `concurrent "npm run tsc:w" "npm run lite" `
+8 info kvp@1.0.0 Failed to exec tsc:w script
+9 verbose stack Error: kvp@1.0.0 tsc:w: `tsc -w`
 9 verbose stack Exit status 1
 9 verbose stack     at EventEmitter.<anonymous> (C:\dev\nodejs\node_modules\npm\lib\utils\lifecycle.js:214:16)
 9 verbose stack     at emitTwo (events.js:87:13)
@@ -22,17 +23,17 @@
 10 verbose pkgid kvp@1.0.0
 11 verbose cwd C:\workspace_schule\KVP-UI
 12 error Windows_NT 6.1.7601
-13 error argv "C:\\dev\\nodejs\\node.exe" "C:\\dev\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+13 error argv "C:\\dev\\nodejs\\node.exe" "C:\\dev\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "tsc:w"
 14 error node v4.1.1
 15 error npm  v2.14.4
 16 error code ELIFECYCLE
-17 error kvp@1.0.0 start: `concurrent "npm run tsc:w" "npm run lite" `
+17 error kvp@1.0.0 tsc:w: `tsc -w`
 17 error Exit status 1
-18 error Failed at the kvp@1.0.0 start script 'concurrent "npm run tsc:w" "npm run lite" '.
+18 error Failed at the kvp@1.0.0 tsc:w script 'tsc -w'.
 18 error This is most likely a problem with the kvp package,
 18 error not with npm itself.
 18 error Tell the author that this fails on your system:
-18 error     concurrent "npm run tsc:w" "npm run lite"
+18 error     tsc -w
 18 error You can get their info via:
 18 error     npm owner ls kvp
 18 error There is likely additional logging output above.
