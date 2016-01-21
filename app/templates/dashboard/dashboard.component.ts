@@ -1,8 +1,8 @@
-import {Component} from 'angular2/core';
-import {NgFor, CORE_DIRECTIVES} from 'angular2/common';
+import {Component} from "angular2/core";
+import {NgFor, CORE_DIRECTIVES} from "angular2/common";
 
 @Component({
-    templateUrl: 'app/templates/dashboard/dashboard.html',
+    templateUrl: "app/templates/dashboard/dashboard.html",
     directives: [NgFor, CORE_DIRECTIVES]
 })
 export class DashboardComponent {

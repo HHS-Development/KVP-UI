@@ -1,7 +1,7 @@
-import {Component} from 'angular2/core';
+import {Component} from "angular2/core";
 
 @Component({
-    templateUrl: 'app/templates/newticket/newticket.html'
+    templateUrl: "app/templates/newticket/newticket.html"
 })
 export class NewTicketComponent {
   getUserName(): string {
