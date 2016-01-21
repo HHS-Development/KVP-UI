@@ -8,13 +8,11 @@ import {Http} from "angular2/http";
 import {BasicAuthHttp} from "./BasicAuthHttp";
 import {ConfigurationService} from "./services/configuration.service";
 import {TicketsService} from "./services/tickets.service";
+import {HTTP_PROVIDERS} from "angular2/http";
+
 bootstrap(AppComponent, [
   ROUTER_PROVIDERS,
   LoginComponent,
   FooterComponent,
-    LoginService,
-    Http,
-    BasicAuthHttp,
-    ConfigurationService,
-    TicketsService
+    HTTP_PROVIDERS
 ]);

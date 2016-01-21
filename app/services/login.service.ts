@@ -7,6 +7,7 @@ import {ConfigurationService} from "./configuration.service";
 import {Headers} from "angular2/http";
 import {Base64} from "../commons/base64";
 import {BasicAuthHttp} from "../BasicAuthHttp";
+import {Inject} from "angular2/core";
 
 @Injectable()
 export class LoginService {
@@ -17,7 +18,7 @@ export class LoginService {
     private _username:string;
     private _password:string;
 
-    constructor(private http:BasicAuthHttp) {
+    constructor(private http:Http) {
         this._isAuthenticated = false;
 
         this._validateUserURL = ConfigurationService.getRestPrefix() + '/authentication';
@@ -26,8 +27,10 @@ export class LoginService {
     validateUser(user:string, password:string):Observable<boolean> {
         this._username = user;
         this._password = password;
-        return this.http.get(this._validateUserURL)
-            .map((res:Response) => this._isAuthenticated = res.ok);
+
+        console.log(user + password);
+
+        return null;
     }
 
     checkAuthenticated():void {
