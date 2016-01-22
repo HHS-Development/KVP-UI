@@ -5,11 +5,9 @@
                 <div class="col-lg-5 col-lg-offset-4">
                     <div class="footerContent">
                         <ul class="footerContentList">
-                            <li><a href="#contact" data-toggle="modal" data-target=".contactModalLabel">Kontakt</a></li>
-                            <li><a href="#impressum" data-toggle="modal"
-                                   data-target=".impressumModalLabel">Impressum</a></li>
-                            <li><a href="#dataProtection" data-toggle="modal" data-target=".dataProtectionModalLabel">Datenschutz</a>
-                            </li>
+                            <li [class.active]="getLinkStyle('/contact')"><a [routerLink]="['Contact']">Kontakt</a></li>
+                            <li [class.active]="getLinkStyle('/impressum')"><a [routerLink]="['Impressum']">Impressum</a></li>
+                            <li [class.active]="getLinkStyle('/dataprotection')"><a [routerLink]="['DataProtection']">Datenschutz</a></li>
                         </ul>
                     </div>
                 </div>

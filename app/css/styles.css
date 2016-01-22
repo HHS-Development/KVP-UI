@@ -56,3 +56,8 @@
 .footerContentList > li > a:hover {
     color: white;
 }
+
+.footerContentList > li:active {
+    color: white;
+    font-weight: 600;
+}
