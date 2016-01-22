@@ -3,9 +3,7 @@ import {ROUTER_PROVIDERS} from "angular2/router";
 import {AppComponent} from "./app.component";
 import {LoginComponent} from "./templates/login/login.component";
 import {FooterComponent} from "./templates/footer/footer.component";
-import {LoginService} from "./services/login.service";
 import {Http} from "angular2/http";
-import {BasicAuthHttp} from "./BasicAuthHttp";
 import {TicketsService} from "./services/tickets.service";
 import {HTTP_PROVIDERS} from "angular2/http";
 import {provide} from "angular2/core";
@@ -25,13 +23,5 @@ bootstrap(AppComponent, [
 
     //Configuration
     provide(ServiceConfiguration, {useValue: {url: '/ticket'}, useClass: TicketServiceConfiguration}),
-    provide('AuthValidateUrl', {useValue: '/login'})/*,
-    provide(BasicAuthHttp, {
-        useFactory: (backend:ConnectionBackend, defaultOptions:RequestOptions) => {
-            console.log("!");
-            return new BasicAuthHttp('/login', backend, defaultOptions)
-        },
-        useClass: BasicAuthHttp,
-        debs: [ConnectionBackend, RequestOptions]
-    })*/
+    provide('AuthValidateUrl', {useValue: '/login'})
 ]);

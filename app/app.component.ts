@@ -14,9 +14,10 @@ import {FooterComponent} from "./templates/footer/footer.component";
     directives: [ROUTER_DIRECTIVES, NavigationComponent, LoginComponent, FooterComponent]
 })
 @RouteConfig([
-  {path: "/", name: "Home", component: HomeComponent, useAsDefault: true},
-  {path:"/dashboard", name: "Dashboard", component: DashboardComponent},
-  {path:"/newticket", name: "Newticket", component: NewTicketComponent},
-  {path:"/ticketdetail", name: "TicketDetail", component: TicketDetailComponent}
+    {path: "/", name: "Home", component: HomeComponent, useAsDefault: true},
+    {path: "/dashboard", name: "Dashboard", component: DashboardComponent},
+    {path: "/newticket", name: "Newticket", component: NewTicketComponent},
+    {path: "/ticketdetail", name: "TicketDetail", component: TicketDetailComponent}
 ])
-export class AppComponent { }
+export class AppComponent {
+}
