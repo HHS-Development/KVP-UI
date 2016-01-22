@@ -1,10 +1,9 @@
 import {Injectable} from "angular2/core";
-import {LoginService} from "./login.service";
 import {Observable} from "rxjs/Observable";
 import {Http} from "angular2/http";
 import {Response} from "angular2/http";
 import {UnimplementedError} from "../errors/UnimplementedError";
-import {BasicAuthHttp} from "../BasicAuthHttp";
+import {BasicAuthHttp} from "../commons/BasicAuthHttp";
 
 @Injectable()
 export class TicketsService {

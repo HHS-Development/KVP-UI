@@ -1,6 +1,6 @@
 import {Component} from "angular2/core";
 import {NavigationComponent} from "../navigation/navigation.component";
-import {BasicAuthHttp} from "../../BasicAuthHttp";
+import {BasicAuthHttp} from "../../commons/BasicAuthHttp";
 
 @Component({
     selector: "login-component",

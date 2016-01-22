@@ -11,6 +11,7 @@ export class NavigationComponent {
   public loggedIn: boolean = false;
   private user = {"name": "Charlie Sheen"};
   constructor(private _location: Location){}
+
   isLoggedIn(): boolean {
     return false;
   }

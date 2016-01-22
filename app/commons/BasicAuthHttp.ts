@@ -4,11 +4,11 @@ import {Request} from "angular2/http";
 import {Observable} from "rxjs/Observable";
 import {Response} from "angular2/http";
 import {Injectable} from "angular2/core";
-import {UnauthenticatedError} from "./errors/UnauthenticatedError";
-import {Base64} from "./commons/base64";
 import {ConnectionBackend} from "angular2/http";
 import {RequestOptions} from "angular2/http";
 import {Inject} from "angular2/core";
+import {Base64} from "./base64";
+import {UnauthenticatedError} from "../errors/UnauthenticatedError";
 
 @Injectable()
 export class BasicAuthHttp extends Http {
@@ -25,7 +25,7 @@ export class BasicAuthHttp extends Http {
         this._validateAuthUrl = validateAuthUrl;
     }
 
-    request(url:string|Request, options:RequestOptionsArgs = new RequestOptionsArgs()):Observable<Response> {
+    request(url:string|Request, options?:RequestOptionsArgs):Observable<Response> {
         this.prepareReqest(options);
         return super.request(url, options);
     }
