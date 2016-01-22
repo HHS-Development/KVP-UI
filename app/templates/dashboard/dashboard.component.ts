@@ -1,6 +1,7 @@
 import {Component} from "angular2/core";
 import {NgFor, CORE_DIRECTIVES} from "angular2/common";
 import {Router} from "angular2/router";
+import {Ticket} from "../../api/Ticket";
 
 @Component({
     templateUrl: "app/templates/dashboard/dashboard.html",
@@ -8,28 +9,14 @@ import {Router} from "angular2/router";
 })
 export class DashboardComponent {
   public checkModel:any = {left: false, middle: true, right: false};
-  private tickets: any = [
-    {
-      "name": "Ticket 1",
-      "status": "Offen"
-    },
-    {
-      "name": "Ticket 2",
-      "status": "In Bearbeitung"
-    },
-    {
-      "name": "Ticket 3",
-      "status": "Offen"
-    },
-    {
-      "name": "Ticket 4",
-      "status": "Geschlossen"
-    },
-    {
-      "name": "Ticket 5",
-      "status": "In Bearbeitung"
-    }
+  private tickets: Ticket[] = [
+    new Ticket("1","Ticket 1","","Offen","","",""),
+    new Ticket("2","Ticket 2","","In Bearbeitung","","",""),
+    new Ticket("3","Ticket 3","","Geschlossen","","",""),
+    new Ticket("4","Ticket 4","","Offen","","",""),
+    new Ticket("5","Ticket 5","","In Bearbeitung","","","")
   ];
+
   private mytickets = this.tickets;
   constructor(private _router: Router) { }
   openTicket(ticket): void {
