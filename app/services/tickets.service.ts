@@ -2,7 +2,6 @@ import {Injectable} from "angular2/core";
 import {LoginService} from "./login.service";
 import {Observable} from "rxjs/Observable";
 import {Http} from "angular2/http";
-import {ConfigurationService} from "./configuration.service";
 import {Response} from "angular2/http";
 import {UnimplementedError} from "../errors/UnimplementedError";
 import {BasicAuthHttp} from "../BasicAuthHttp";
@@ -13,7 +12,7 @@ export class TicketsService {
     private _getTicketsURL:string;
 
     constructor(private _http:Http, private _authHttp:BasicAuthHttp) {
-        this._getTicketsURL = ConfigurationService.getRestPrefix() + '/tickets'
+        this._getTicketsURL = '/tickets';
     }
 
     getTickets():Observable<any> {

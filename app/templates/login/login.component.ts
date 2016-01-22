@@ -9,8 +9,11 @@ import {LoginService} from "../../services/login.service";
 })
 export class LoginComponent {
 
+    constructor(private _loginService:LoginService) {
+    }
+
     onClickLogin():boolean {
-        console.log("Bla");
+        this._loginService.validateUser("hans", "geheimgeheim");
         return false;
     }
 

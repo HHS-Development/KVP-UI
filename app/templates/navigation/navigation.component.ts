@@ -12,7 +12,7 @@ export class NavigationComponent {
   private user = {"name": "Charlie Sheen"};
   constructor(private _location: Location){}
   isLoggedIn(): boolean {
-    return true;
+    return false;
   }
 
   logout(): void {
