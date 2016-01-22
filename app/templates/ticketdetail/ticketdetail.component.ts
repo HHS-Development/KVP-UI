@@ -20,6 +20,10 @@ export class TicketDetailComponent {
     ];
   }
 
+  getStatus(): string{
+    return this._ticket.status;
+  }
+
   getOwner(): string{
     // todo: Ownername by ticket.ownerId
     return "Charlie Sheen";
