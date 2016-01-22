@@ -8,6 +8,7 @@ import {UnauthenticatedError} from "./errors/UnauthenticatedError";
 import {Base64} from "./commons/base64";
 import {ConnectionBackend} from "angular2/http";
 import {RequestOptions} from "angular2/http";
+import {Inject} from "angular2/core";
 
 @Injectable()
 export class BasicAuthHttp extends Http {
@@ -19,7 +20,7 @@ export class BasicAuthHttp extends Http {
     private _password:string;
 
 
-    constructor(validateAuthUrl:string, backend:ConnectionBackend, defaultOptions:RequestOptions) {
+    constructor(@Inject('AuthValidateUrl') validateAuthUrl:string, backend:ConnectionBackend, defaultOptions:RequestOptions) {
         super(backend, defaultOptions);
         this._validateAuthUrl = validateAuthUrl;
     }
@@ -61,7 +62,8 @@ export class BasicAuthHttp extends Http {
     }
 
     revalidateLogin():void {
-        super.get(this.validateAuthUrl)
+        console.log(this.validateAuthUrl);
+        //super.get(this.validateAuthUrl)
     }
 
     private prepareReqest(options:RequestOptionsArgs):void {
