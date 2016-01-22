@@ -6,9 +6,9 @@ import {Response} from "angular2/http";
 import {Injectable} from "angular2/core";
 import {ConnectionBackend} from "angular2/http";
 import {RequestOptions} from "angular2/http";
-import {Inject} from "angular2/core";
 import {Base64} from "./base64";
 import {UnauthenticatedError} from "../errors/UnauthenticatedError";
+import {Inject} from "angular2/core";
 
 @Injectable()
 export class BasicAuthHttp extends Http {
