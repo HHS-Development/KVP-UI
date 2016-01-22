@@ -1,19 +1,21 @@
 import {Component} from "angular2/core";
 import {NavigationComponent} from "../navigation/navigation.component";
-import {LoginService} from "../../services/login.service";
+import {BasicAuthHttp} from "../../BasicAuthHttp";
 
 @Component({
     selector: "login-component",
     templateUrl: "app/templates/login/login.html",
-    providers: [LoginService]
+    providers: [BasicAuthHttp]
 })
 export class LoginComponent {
 
-    constructor(private _loginService:LoginService) {
+    constructor(private _authHttp:BasicAuthHttp) {
     }
 
     onClickLogin():boolean {
-        this._loginService.validateUser("hans", "geheimgeheim");
+        this._authHttp.username = "hans";
+        this._authHttp.password = "geheimgeheim";
+        this._authHttp.revalidateLogin();
         return false;
     }
 

@@ -19,15 +19,19 @@ bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
     LoginComponent,
     FooterComponent,
-    HTTP_PROVIDERS
+    HTTP_PROVIDERS,
+
+    ConnectionBackend,
 
     //Configuration
-    /*provide('AuthValidateUrl', {useValue: '/login'}),
+    provide(ServiceConfiguration, {useValue: {url: '/ticket'}, useClass: TicketServiceConfiguration}),
+    provide('AuthValidateUrl', {useValue: '/login'})/*,
     provide(BasicAuthHttp, {
-        useFactory: (authValUrl:string, backend:ConnectionBackend, defaultOptions:RequestOptions) => {
-            return new BasicAuthHttp(authValUrl, backend, defaultOptions)
+        useFactory: (backend:ConnectionBackend, defaultOptions:RequestOptions) => {
+            console.log("!");
+            return new BasicAuthHttp('/login', backend, defaultOptions)
         },
+        useClass: BasicAuthHttp,
         debs: [ConnectionBackend, RequestOptions]
     })*/
-    //, provide(ServiceConfiguration, {useValue: {url: '/ticket'}, useClass: TicketServiceConfiguration})
 ]);

@@ -1,6 +1,6 @@
-export interface ServiceConfiguration {
+export class ServiceConfiguration {
     url:string;
 }
 
-export interface TicketServiceConfiguration extends ServiceConfiguration{
+export class TicketServiceConfiguration extends ServiceConfiguration{
 }
