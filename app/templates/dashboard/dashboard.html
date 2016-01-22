@@ -1,35 +1,35 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-6">
-      <h3>Ticketübersicht</h3>
-      <div class="panel panel-default" *ngFor="#ticket of tickets">
-        <div class="panel-body">
-          <div class="col-lg-4">
-            {{ticket.subject}}
-          </div>
-          <div class="col-lg-4">
-            {{ticket.status}}
-          </div>
-          <div class="col-lg-4">
-            <button class="btn btn-primary" (click)="openTicket(ticket)">Ticket öffnen</button>
-          </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Ticketübersicht</h3>
+            <div class="panel panel-default" *ngFor="#ticket of tickets">
+                <div class="panel-body">
+                    <div class="col-lg-4">
+                        {{ticket.subject}}
+                    </div>
+                    <div class="col-lg-4">
+                        {{ticket.status}}
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-primary" (click)="openTicket(ticket)">Ticket öffnen</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="col-lg-6">
+            <h3>Eigene Tickets</h3>
+            <div class="panel panel-default" *ngFor="#myticket of mytickets">
+                <div class="panel-body">
+                    <div class="col-lg-4">
+                        {{myticket.subject}}
+                    </div>
+                    <div class="col-lg-4">
+                        {{myticket.status}}
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-primary" (click)="openTicket(ticket)">Ticket öffnen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-6">
-      <h3>Eigene Tickets</h3>
-      <div class="panel panel-default" *ngFor="#myticket of mytickets">
-        <div class="panel-body">
-          <div class="col-lg-4">
-            {{myticket.subject}}
-          </div>
-          <div class="col-lg-4">
-            {{myticket.status}}
-          </div>
-          <div class="col-lg-4">
-            <button class="btn btn-primary" (click)="openTicket(ticket)">Ticket öffnen</button>
-          </div>
-        </div>
-      </div>
-  </div>
-</div>

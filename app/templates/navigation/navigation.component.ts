@@ -8,19 +8,21 @@ import {LoginComponent} from "../login/login.component";
     directives: [ROUTER_DIRECTIVES, NgIf, LoginComponent]
 })
 export class NavigationComponent {
-  public loggedIn: boolean = false;
-  private user = {"name": "Charlie Sheen"};
-  constructor(private _location: Location){}
+    public loggedIn:boolean = false;
+    private user = {"name": "Charlie Sheen"};
 
-  isLoggedIn(): boolean {
-    return false;
-  }
+    constructor(private _location:Location) {
+    }
 
-  logout(): void {
-    // to do
-  }
+    isLoggedIn():boolean {
+        return false;
+    }
 
-  getLinkStyle(path): boolean {
-    return this._location.path() === path;
-  }
+    logout():void {
+        // to do
+    }
+
+    getLinkStyle(path):boolean {
+        return this._location.path() === path;
+    }
 }

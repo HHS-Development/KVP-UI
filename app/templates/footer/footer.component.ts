@@ -5,4 +5,5 @@ import {Component} from "angular2/core";
     templateUrl: "app/templates/footer/footer.html",
     styleUrls: ["app/css/styles.css"]
 })
-export class FooterComponent { }
+export class FooterComponent {
+}
