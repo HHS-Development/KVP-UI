@@ -3,7 +3,6 @@ import {UnauthenticatedError} from "../errors/UnauthenticatedError";
 import {Http} from "angular2/http";
 import {Response} from "angular2/http";
 import {Observable} from "rxjs/Observable";
-import {ConfigurationService} from "./configuration.service";
 import {Headers} from "angular2/http";
 import {Base64} from "../commons/base64";
 import {BasicAuthHttp} from "../BasicAuthHttp";
@@ -21,7 +20,7 @@ export class LoginService {
     constructor(private http:Http) {
         this._isAuthenticated = false;
 
-        this._validateUserURL = ConfigurationService.getRestPrefix() + '/authentication';
+        this._validateUserURL = '/authentication';
     }
 
     validateUser(user:string, password:string):Observable<boolean> {
