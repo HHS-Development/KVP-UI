@@ -1,5 +1,6 @@
 import {Component} from "angular2/core";
 import {NgFor, CORE_DIRECTIVES} from "angular2/common";
+import {Router} from "angular2/router";
 
 @Component({
     templateUrl: "app/templates/dashboard/dashboard.html",
@@ -30,4 +31,8 @@ export class DashboardComponent {
     }
   ];
   private mytickets = this.tickets;
+  constructor(private _router: Router) { }
+  openTicket(ticket): void {
+    this._router.navigate( ["TicketDetail", { ticket: ticket }] );
+  }
 }
