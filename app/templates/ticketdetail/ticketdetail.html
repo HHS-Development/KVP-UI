@@ -1,6 +1,8 @@
 <div class="container">
-  <div class="col-lg-12">
-    <h3>Ticket Detail</h3>
+  <div class="row">
+    <div class="col-lg-12">
+      <h3>Ticket Detail</h3>
+    </div>
   </div>
   <div class="row">
     <div class="col-lg-6">
@@ -20,18 +22,29 @@
       </form>
     </div>
     <div class="col-lg-6">
-      <h4>Anliegen</h4>
+      <label>Anliegen</label>
       <div class="panel panel-default">
         <div class="panel-body">
           {{getSubject()}}
         </div>
       </div>
-      <h4>Verbesserungsvorschlag</h4>
+      <label>Verbesserungsvorschlag</label>
       <div class="panel panel-default">
         <div class="panel-body">
           {{getProposal()}}
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <h3>Kommentare</h3>
+    </div>
+  </div>
+  <div class="panel panel-default" *ngFor="#comment of _comments">
+    <div class="panel-heading"><strong>{{comment.date}} Uhr </strong>| {{getUserName(comment.ownerId)}}</div>
+    <div class="panel-body">
+      {{comment.content}}
     </div>
   </div>
 </div>

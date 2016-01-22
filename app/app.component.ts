@@ -17,7 +17,7 @@ import {FooterComponent} from "./templates/footer/footer.component";
     {path: "/", name: "Home", component: HomeComponent, useAsDefault: true},
     {path: "/dashboard", name: "Dashboard", component: DashboardComponent},
     {path: "/newticket", name: "Newticket", component: NewTicketComponent},
-    {path: "/ticketdetail", name: "TicketDetail", component: TicketDetailComponent}
+    {path: "/ticketdetail/:ticket", name: "TicketDetail", component: TicketDetailComponent}
 ])
 export class AppComponent {
 }
