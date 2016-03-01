@@ -10,7 +10,6 @@ import {FooterComponent} from "./templates/footer/footer.component";
 import {ContactComponent} from "./templates/contact/contact.component";
 import {ImpressumComponent} from "./templates/impressum/impressum.component";
 import {DataProtectionComponent} from "./templates/dataprotection/dataprotection.component";
-
 @Component({
     selector: "app-component",
     templateUrl: "app/templates/app/app.html",

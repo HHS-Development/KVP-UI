@@ -18,7 +18,6 @@ bootstrap(AppComponent, [
     LoginComponent,
     FooterComponent,
     HTTP_PROVIDERS,
-
     ConnectionBackend,
 
     //Configuration
